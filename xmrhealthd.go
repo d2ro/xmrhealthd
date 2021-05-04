@@ -71,7 +71,7 @@ func Run(ipAddress string) {
 		for ; true; <-ticker.C {
 			state, err := QueryMonerod(ipAddress)
 			if err == nil {
-				responseData, _ = json.Marshal(State{"XMR", state})
+				responseData, _ = json.Marshal([]State{{"XMR", state}})
 				responseStatusCode = http.StatusOK
 			} else {
 				responseData = nil
