@@ -1,5 +1,7 @@
 # xmrhealthd
 
+_Update: From version 1.2.1.0, BTCPay Server serves the XMR sync status over its own API, making this tool obsolete._
+
 xmrhealthd queries the [get_info](https://www.getmonero.org/resources/developer-guides/daemon-rpc.html#get_info) API endpoint of a Monero node every ten seconds. It serves the `synchronized` value through an own HTTP endpoint on port 64325:
 
 ```
